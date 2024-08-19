@@ -327,7 +327,7 @@ The code I used to generate the products from the descriptions column:
 [Popular_Products](sql_code/PopularProducts.ipynb)
 
 #### **Insights I gained from the problem statement:**
-- Ignoring the other categories which includes a majority of the products that I couldn't be able to categorise, some of the more popular products based on the descriptions column of the data include the following:
+- Ignoring the other categories which includes a majority of the products that I couldn't be able to categorize, some of the more popular products based on the descriptions column of the data include the following:
 
 ![Popular_Products](images/Popular_Products.png)
 *Bar graph showcasing some of the more popular products offerd by the business*
@@ -340,4 +340,4 @@ The code I used to generate the products from the descriptions column:
 - Identifying both positive and negative trends is essential. For instance, analyzing customer churn can pinpoint high-value customers at risk of attrition, enabling proactive retention strategies.
 
 # What I learned
-- It was a another great experience in futhering my skills in python and SQL. I learnt a new way of using regular expressions to identify key words in a description for categorical purposes and I continued to work on more window functions in SQL.
+- It was another great experience in futhering my skills in python and SQL. I learnt a new way of using regular expressions to identify key words in a description for categorical purposes and I continued to work with more window functions in SQL.
