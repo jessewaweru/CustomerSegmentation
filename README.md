@@ -5,7 +5,7 @@ Here are the SQL queires I used to generate my various insights:
 [Customer_Segmentation](sql_code)
 
 # Background
-I wanted a dataset that could provide me with a chance to perform customer segmentation using SQL and also showcase other valuable metrics that a business has to focus on when it comes to performance, operations and customers especially when it comes to the buying behavior of customers. The metrics identified could also be helpful in formulating or improving the current marketing strategies already in place. 
+I sought a dataset that would enable me to conduct customer segmentation using SQL and uncover valuable metrics for business performance, operations, and customer behavior, particularly regarding purchasing patterns. The identified metrics could also be used to refine or enhance existing marketing strategies. 
 
 ### Problem statements I decided to use to answer my SQL queries
 1. What are the major customer segments for the store?
@@ -93,10 +93,10 @@ ORDER BY
 | 13662          | 9656.85      | 4          | April      | 14298      | 1    |
 
 
-The first section of the code showcases the top 30 customers for the business regarding total spent by their customerid. The second section shows the top customer purchasers by month. This could help the business with targeted marketing promotions and discounts to entice even more purchases both by sending seasonal promotions for monthly top purchasers and specialized promotions for the top 30 customers for the year.
+The code initially identifies the top 30 customers based on total spending. Subsequently, it highlights the top customers per month. This information can be leveraged for targeted marketing initiatives, such as sending seasonal promotions to monthly top purchasers and tailored offers to the top 30 annual spenders, to stimulate increased customer purchases.
 
 ### 2. Which customers are at risk of churning?
-Next, I wanted to indentify which customers, out of the top 30 purchasers, are at risk of churning so I filtered the data and compiled a table showcasing the month by month total spent for each customer and then to plot the results. I used the final 3 months of the fiscal year to identify a declining trend.
+Next, I wanted to identify which customers, out of the top 30 purchasers, are at risk of churning so I filtered the data and compiled a table showcasing the month-by-month total spent for each customer and then plot the results. I used the final 3 months of the fiscal year to identify a declining trend.
 
 ```SQL
 WITH TOP_PURCHASES AS(
@@ -147,7 +147,7 @@ ORDER BY
 ![Customer_Churn](images/C_churn_plot.png)
 *Bar graph showcasing the final three-month trend of total spent by customers*
 
-From the results of the plot, It is clear that customer id number 12415, 14646 and 16684. The business could target these customers through digital marketing and start offering personalized promotions an discounts for the beginning of the next fiscal year such as bulk order discounting.
+The plot indicates that customer IDs 12415, 14646, and 16684 are particularly valuable. The business could implement targeted digital marketing campaigns and offer personalized promotions and discounts, such as bulk order discounts, at the beginning of the next fiscal year to maximize engagement with these customers.
 
 ### 3. Who are the store's most valuable customers in terms of Customer lifetime value?
 
@@ -220,10 +220,10 @@ ORDER BY
 ```
 
 #### **Insights I gained from the problem statement:**
-- The code generated the top 30 most valuable customers as per C.L.V. This data could help the business in the event they decide to introduce more products into the market, they already have an idea of some of the customers who coul decide to target through advertising and product positioning.
-- The store could even use such customers to generate valubale feedback about their customers to improve upon their future or current products, their services or even get future ideas on how to improve their business model if need be.
+- The code identified the top 30 customers based on customer lifetime value (CLV). This data can be valuable for the business when introducing new products, as it provides a targeted audience for advertising and product positioning.
+- The store can leverage these high-value customers to gather valuable feedback on products, services, and potential business model improvements. This feedback can inform future product development and service enhancements.
 
-### 4. What's the average time per purchase for customers and which ones out of the top purchasers have the highest average time to purchase?
+### 4. What's the average time per purchase for customers and out of the top purchasers,who have the highest average time to purchase?
 
 ```SQL
 WITH purchase_times AS (
@@ -317,8 +317,8 @@ ORDER BY
 ```
 
 #### **Insights I gained from the problem statement:**
-- The first section of the code generated the customers who averaged the most days before making another purchase. The second section highlights the same but now the top 30 purchasers. Such data could prove ciritical when changing marketing strategies especially when it comes to promotions and identifying specific bottlenecks in a customer's buying journey.
-- The business could offer promotions that are catered to logisitic solutions due to possible issues such as high cost of shipping and delivery
+- The code initially identifies customers with the longest average purchase intervals. Subsequently, it highlights the top 30 customers based on purchase frequency. This data can be crucial for refining marketing strategies, particularly regarding promotions and identifying potential bottlenecks in the customer journey.
+- The business could offer promotions focused on logistics solutions to address potential issues like high shipping and delivery costs.
 
 ### 5. What are some of the more popular products bought from the store(considering the lack of product categories from the dataset)?
 
@@ -327,17 +327,16 @@ The code I used to generate the products from the descriptions column:
 [Popular_Products](sql_code/PopularProducts.ipynb)
 
 #### **Insights I gained from the problem statement:**
-- Ignoring the other categories which includes a majority of the products that I couldn't be able to categorize, some of the more popular products based on the descriptions column of the data include the following:
+- Ignoring the 'other' category which includes a majority of products that I wasn't be able to categorize, some of the more popular products based on the descriptions column of the data include the following:
 
 ![Popular_Products](images/Popular_Products.png)
-*Bar graph showcasing some of the more popular products offerd by the business*
+*Bar graph showcasing some of the more popular products offered by the business*
 
-- The business could decide to set up marketing strategies dedicated at maximizing the sale and purchase of such popular items across the entire product line. This could involve a series of digital marketing promotions, a website redesign prioritising such products as the first to be seen across designated landing pages etc.
+- The business could implement marketing strategies focused on maximizing sales and purchases of popular items across the product line. This could involve a series of digital marketing campaigns, a website redesign prioritizing these products on designated landing pages, and other targeted initiatives.
 
 # Conclusions
-- Being able to identify trends be it positive or negative is also crucial i.e. in the case of Customer churn, ends up helping a business to identify the customers who need priority attention especially if the historical data shows that they are consistently top purchasers and help avoid any risk of churning in the future.
+- Identifying trends, both positive and negative, is essential. For instance, analyzing customer churn can help businesses pinpoint high-value customers who may require additional attention, particularly if historical data indicates consistent top purchases. This proactive approach can mitigate the risk of future customer churn.
 
-- Identifying both positive and negative trends is essential. For instance, analyzing customer churn can pinpoint high-value customers at risk of attrition, enabling proactive retention strategies.
 
 # What I learned
-- It was another great experience in futhering my skills in python and SQL. I learnt a new way of using regular expressions to identify key words in a description for categorical purposes and I continued to work with more window functions in SQL.
+- I furthered my Python and SQL skills, learning a new approach to using regular expressions for keyword identification in descriptions and expanding my knowledge of SQL window functions.
